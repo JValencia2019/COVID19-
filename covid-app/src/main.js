@@ -8,7 +8,9 @@ Vue.config.productionTip = false
 Vue.prototype.$http=axios;
 Vue.use(VueRouter);
 const routes = [
-  { path: '/', component:()=> import('./view/Home.vue') },
+  { path: '/app', component:()=> import('./view/Home.vue'),
+childs:[] },
+  { path: '/', component:()=> import('./view/Login.vue') },
 
 ]
 const router = new VueRouter({
